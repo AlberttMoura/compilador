@@ -1,0 +1,15 @@
+POLICY=1
+TARGET=2
+POLICY_RULE=3
+CONDITION_KEY=4
+CONDITIONVALUE=5
+ACTION=6
+STRING=7
+ESPACO=8
+CONDITION_VALUE=9
+'Policy Name = '=1
+'Target = '=2
+'Rule Name = '=3
+'Condition Key = '=4
+'Condition Value = '=5
+'Action = '=6

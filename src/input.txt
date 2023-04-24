@@ -1,0 +1,5 @@
+Rule Name = write
+Condition Key = Condition Test
+Action = Allow
+Policy Name = LGBETINHOS
+Target = Admin
