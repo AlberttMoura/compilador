@@ -27,6 +27,16 @@ public interface PolicyGrammarListener extends ParseTreeListener {
 	 */
 	void exitExp(PolicyGrammarParser.ExpContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PolicyGrammarParser#policy_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterPolicy_name(PolicyGrammarParser.Policy_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PolicyGrammarParser#policy_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitPolicy_name(PolicyGrammarParser.Policy_nameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PolicyGrammarParser#target}.
 	 * @param ctx the parse tree
 	 */

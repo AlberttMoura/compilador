@@ -17,11 +17,11 @@ program
     ;
 
 exp
-    : POLICY STRING target policyRule* ACTION STRING
-    | TARGET STRING
-    | policyRule
-    | CONDITION_KEY STRING CONDITION_VALUE STRING
-    | ACTION STRING
+    :policy_name target policyRule condition action
+    ;
+
+policy_name
+    : POLICY STRING
     ;
 
 target
@@ -29,7 +29,7 @@ target
     ;
 
 policyRule
-    : POLICY_RULE STRING condition action
+    : POLICY_RULE STRING
     ;
 
 condition
