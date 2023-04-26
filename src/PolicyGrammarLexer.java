@@ -16,7 +16,7 @@ public class PolicyGrammarLexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		POLICY=1, TARGET=2, POLICY_RULE=3, CONDITION_KEY=4, CONDITIONVALUE=5, 
+		POLICY=1, TARGET=2, POLICY_RULE=3, CONDITION_KEY=4, CONDITION_VALUE=5, 
 		ACTION=6, STRING=7, ESPACO=8;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
@@ -28,7 +28,7 @@ public class PolicyGrammarLexer extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"POLICY", "TARGET", "POLICY_RULE", "CONDITION_KEY", "CONDITIONVALUE", 
+			"POLICY", "TARGET", "POLICY_RULE", "CONDITION_KEY", "CONDITION_VALUE", 
 			"ACTION", "STRING", "ESPACO"
 		};
 	}
@@ -43,7 +43,7 @@ public class PolicyGrammarLexer extends Lexer {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "POLICY", "TARGET", "POLICY_RULE", "CONDITION_KEY", "CONDITIONVALUE", 
+			null, "POLICY", "TARGET", "POLICY_RULE", "CONDITION_KEY", "CONDITION_VALUE", 
 			"ACTION", "STRING", "ESPACO"
 		};
 	}

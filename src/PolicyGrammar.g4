@@ -5,7 +5,7 @@ POLICY: 'Policy Name = ';
 TARGET: 'Target = ';
 POLICY_RULE: 'Rule Name = ';
 CONDITION_KEY: 'Condition Key = ';
-CONDITIONVALUE: 'Condition Value = ';
+CONDITION_VALUE: 'Condition Value = ';
 ACTION: 'Action = ';
 STRING: [a-zA-Z0-9 /:.]+;
 

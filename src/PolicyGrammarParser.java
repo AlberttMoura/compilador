@@ -16,8 +16,8 @@ public class PolicyGrammarParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		POLICY=1, TARGET=2, POLICY_RULE=3, CONDITION_KEY=4, CONDITIONVALUE=5, 
-		ACTION=6, STRING=7, ESPACO=8, CONDITION_VALUE=9;
+		POLICY=1, TARGET=2, POLICY_RULE=3, CONDITION_KEY=4, CONDITION_VALUE=5, 
+		ACTION=6, STRING=7, ESPACO=8;
 	public static final int
 		RULE_program = 0, RULE_exp = 1, RULE_target = 2, RULE_policyRule = 3, 
 		RULE_condition = 4, RULE_action = 5;
@@ -37,8 +37,8 @@ public class PolicyGrammarParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "POLICY", "TARGET", "POLICY_RULE", "CONDITION_KEY", "CONDITIONVALUE", 
-			"ACTION", "STRING", "ESPACO", "CONDITION_VALUE"
+			null, "POLICY", "TARGET", "POLICY_RULE", "CONDITION_KEY", "CONDITION_VALUE", 
+			"ACTION", "STRING", "ESPACO"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -477,7 +477,7 @@ public class PolicyGrammarParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\t8\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\b8\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0001\u0000\u0005\u0000\u000e\b\u0000\n\u0000\f\u0000"+
 		"\u0011\t\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0005\u0001"+
@@ -501,7 +501,7 @@ public class PolicyGrammarParser extends Parser {
 		"\u001b\u001c\u0005\u0006\u0000\u0000\u001c\u001d\u0005\u0007\u0000\u0000"+
 		"\u001d(\u0001\u0000\u0000\u0000\u001e\u001f\u0005\u0002\u0000\u0000\u001f"+
 		"(\u0005\u0007\u0000\u0000 (\u0003\u0006\u0003\u0000!\"\u0005\u0004\u0000"+
-		"\u0000\"#\u0005\u0007\u0000\u0000#$\u0005\t\u0000\u0000$(\u0005\u0007"+
+		"\u0000\"#\u0005\u0007\u0000\u0000#$\u0005\u0005\u0000\u0000$(\u0005\u0007"+
 		"\u0000\u0000%&\u0005\u0006\u0000\u0000&(\u0005\u0007\u0000\u0000\'\u0012"+
 		"\u0001\u0000\u0000\u0000\'\u001e\u0001\u0000\u0000\u0000\' \u0001\u0000"+
 		"\u0000\u0000\'!\u0001\u0000\u0000\u0000\'%\u0001\u0000\u0000\u0000(\u0003"+
