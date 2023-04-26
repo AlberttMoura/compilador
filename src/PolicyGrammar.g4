@@ -5,7 +5,7 @@ POLICY: 'Policy Name = ';
 TARGET: 'Target = ';
 POLICY_RULE: 'Rule Name = ';
 CONDITION_KEY: 'Condition Key = ';
-CONDITION_VALUE: 'Condition Value = ';
+CONDITIONVALUE: 'Condition Value = ';
 ACTION: 'Action = ';
 STRING: [a-zA-Z0-9 /:.]+;
 
@@ -17,11 +17,11 @@ program
     ;
 
 exp
-    :policy_name target policyRule condition action
-    ;
-
-policy_name
-    : POLICY STRING
+    : POLICY STRING target policyRule* ACTION STRING
+    | TARGET STRING
+    | policyRule
+    | CONDITION_KEY STRING CONDITION_VALUE STRING
+    | ACTION STRING
     ;
 
 target
@@ -29,7 +29,7 @@ target
     ;
 
 policyRule
-    : POLICY_RULE STRING
+    : POLICY_RULE STRING condition
     ;
 
 condition

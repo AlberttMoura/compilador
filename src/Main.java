@@ -14,7 +14,7 @@ public class Main {
             PolicyGrammarLexer lexer = new PolicyGrammarLexer(cs);
             CommonTokenStream token = new CommonTokenStream(lexer);
             PolicyGrammarParser parser = new PolicyGrammarParser(token);
-            ParseTree tree = parser.policyRule();
+            ParseTree tree = parser.program();
             System.out.println(tree.toStringTree());
         } catch(IOException e) {
             System.out.println(e.getMessage());
