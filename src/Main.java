@@ -4,6 +4,8 @@ import org.antlr.v4.runtime.tree.ParseTree;
 
 import static org.antlr.v4.runtime.CharStreams.fromFileName;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
@@ -15,7 +17,14 @@ public class Main {
             CommonTokenStream token = new CommonTokenStream(lexer);
             PolicyGrammarParser parser = new PolicyGrammarParser(token);
             ParseTree tree = parser.program();
-            System.out.println(tree.toStringTree());
+
+            Analyzer analyzer = new Analyzer();
+
+            String outfile = "src/output.txt";
+            BufferedWriter out = new BufferedWriter(new FileWriter(outfile));
+            out.write(analyzer.analyze(tree.getChild(0)));
+            out.close();
+
         } catch(IOException e) {
             System.out.println(e.getMessage());
         }

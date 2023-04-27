@@ -31,6 +31,13 @@ public class PolicyGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitPolicy(PolicyGrammarParser.PolicyContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitTarget(PolicyGrammarParser.TargetContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -46,11 +53,4 @@ public class PolicyGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitCondition(PolicyGrammarParser.ConditionContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitAction(PolicyGrammarParser.ActionContext ctx) { return visitChildren(ctx); }
 }

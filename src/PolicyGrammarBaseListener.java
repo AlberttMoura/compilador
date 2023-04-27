@@ -40,6 +40,18 @@ public class PolicyGrammarBaseListener implements PolicyGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPolicy(PolicyGrammarParser.PolicyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPolicy(PolicyGrammarParser.PolicyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTarget(PolicyGrammarParser.TargetContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -71,18 +83,6 @@ public class PolicyGrammarBaseListener implements PolicyGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCondition(PolicyGrammarParser.ConditionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterAction(PolicyGrammarParser.ActionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAction(PolicyGrammarParser.ActionContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

@@ -22,6 +22,12 @@ public interface PolicyGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExp(PolicyGrammarParser.ExpContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link PolicyGrammarParser#policy}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPolicy(PolicyGrammarParser.PolicyContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link PolicyGrammarParser#target}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -39,10 +45,4 @@ public interface PolicyGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitCondition(PolicyGrammarParser.ConditionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link PolicyGrammarParser#action}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAction(PolicyGrammarParser.ActionContext ctx);
 }

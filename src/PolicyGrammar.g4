@@ -5,8 +5,6 @@ POLICY: 'Policy Name = ';
 TARGET: 'Target = ';
 POLICY_RULE: 'Rule Name = ';
 CONDITION_KEY: 'Condition Key = ';
-CONDITIONVALUE: 'Condition Value = ';
-ACTION: 'Action = ';
 STRING: [a-zA-Z0-9 /:.]+;
 
 ESPACO: [ \t\n\r]+ -> skip ;
@@ -17,11 +15,14 @@ program
     ;
 
 exp
-    : POLICY STRING target policyRule* ACTION STRING
+    : policy target policyRule*
     | TARGET STRING
     | policyRule
     | CONDITION_KEY STRING CONDITION_VALUE STRING
-    | ACTION STRING
+    ;
+
+policy
+    : POLICY STRING
     ;
 
 target
@@ -34,8 +35,4 @@ policyRule
 
 condition
     : CONDITION_KEY STRING
-    ;
-
-action
-    : ACTION STRING
     ;

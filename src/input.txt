@@ -2,4 +2,5 @@ Policy Name = LGBETINHOS
 Target = Admin
 Rule Name = write
 Condition Key = Condition Test
-Action = Allow
+Rule Name = write2
+Condition Key = Condition Test2

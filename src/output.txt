@@ -1,0 +1,18 @@
+<Name>
+    LGBETINHOS
+</Name>
+<Target>
+    Admin
+</Target>
+<Rule>
+    write
+<Condition>
+    Condition Test
+</Condition>
+</Rule>
+<Rule>
+    write2
+<Condition>
+    Condition Test2
+</Condition>
+</Rule>
